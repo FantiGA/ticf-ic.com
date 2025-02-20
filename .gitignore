@@ -39,3 +39,27 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+old/index.html
+old/index2.html
+old/index3.html
+old/css/font_family.css
+old/css/select.css
+old/css/style.css
+old/img/banner01-s.jpg
+old/img/banner01.jpg
+old/img/banner02-s.jpg
+old/img/banner02.jpg
+old/img/img03.png
+old/img/img04.png
+old/img/img022.png
+old/img/top_bg.png
+old/img/top_logo.png
+old/img/top.png
+old/img/xian.jpg
+old/img/xwa.png
+old/js/index.js
+old/js/jquery-2.1.1.min.js
+old/js/jquery.bgswitcher.js
+old/js/lilac.js
+old/js/rem.js
+old/js/select.js
