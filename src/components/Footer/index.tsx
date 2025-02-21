@@ -1,5 +1,3 @@
-"use client";
-
 const Footer = () => (
   <div className="bottom">
     <p className="text-xs">

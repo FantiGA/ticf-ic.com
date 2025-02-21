@@ -1,10 +1,3 @@
-/*
- * @Author: fantiga
- * @Date: 2023-02-18 16:12:06
- * @LastEditTime: 2025-02-11 11:46:29
- * @LastEditors: Jun Wu
- * @FilePath: /foxanddog/.prettierrc.js
- */
 /**
  * Prettier Options
  * https://prettier.io/docs/en/options.html

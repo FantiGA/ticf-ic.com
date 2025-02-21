@@ -1,28 +1,18 @@
-"use client";
-import Image from "next/image";
+import LocaleSwitcher from "@/components/LocaleSwitcher";
 
 const Header = () => {
   return (
     <>
-      {/* 导航 */}
-      <div className="drop visible opacity withBG bgw">
-        <div className="option active placeholder" data-value="placeholder">
-          中文简体
-        </div>
-        <div className="option option_topnone" data-value="wow">
-          <a href="index2.html">日本語</a>
-        </div>
-        <div className="option option_topnone" data-value="wow">
-          <a href="index3.html">English</a>
-        </div>
-      </div>
+      <LocaleSwitcher />
 
       <div className="nav bgw" id="nav">
         <div className="n-left">
-          <Image
+          <img
             src="/images/top_logo.png"
             alt="TICF的Logo"
             className="top_logo"
+            width={406}
+            height={97}
           />
         </div>
 
@@ -52,7 +42,7 @@ const Header = () => {
 
       {/* button TOP */}
       <div className="nav-top">
-        <Image src="/images/top.png" alt="TICF的Top" />
+        <img src="/images/top.png" alt="Go to Top" width={70} height={70} />
       </div>
     </>
   );
