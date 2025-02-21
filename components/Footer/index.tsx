@@ -1,12 +1,11 @@
-const Footer = () => {
-    return (
-        <>
-            <div className="bottom">
-                <p style="font-size: 10px;">Copyright(c) 2019 TICF All Rights Reserved.</p>
-            </div>
-        </>
+"use client";
 
+const Footer = () => (
+  <div className="bottom">
+    <p className="text-xs">
+      Copyright &copy; 2019-{new Date().getFullYear()} TICF All Rights Reserved.
+    </p>
+  </div>
+);
 
-    );
-}
 export default Footer;
