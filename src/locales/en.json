@@ -1,5 +1,113 @@
 {
   "header": {
-    "title": "TICF池袋教会（English）"
+    "title": "TICF Ikebukuro Church (Tokyo International Christian Fellowship)",
+    "description": "TICF Ikebukuro Church is an orthodox Christian church. Our church primarily serves Chinese people residing in Japan, foreigners who speak Chinese, and Japanese people, holding bilingual Chinese-Japanese services every Sunday."
+  },
+  "language": {
+    "zh-CN": "Simplified Chinese",
+    "en": "English",
+    "ja": "Japanese"
+  },
+  "menu": {
+    "menu": "MENU",
+    "close": "close"
+  },
+  "chapter": {
+    "our-mission": "Our Mission",
+    "our-vision": "Our Vision",
+    "our-core-value": "Our Core Values",
+    "our-faith-statment": "Our Statement of Faith",
+    "worship-service-information": "Worship Service Information",
+    "contact": "Contact Information"
+  },
+  "prayer-text": {
+    "corinthians15-3": "Jesus Christ died for our sins,",
+    "corinthians15-4": "was buried, and on the third day rose again.",
+    "corinthians15": "(Bible, 1 Corinthians 15:3-4)",
+    "line1": "Believe in our Savior, Jesus Christ!",
+    "line2": "If you truly believe in your heart, you can accept Jesus through prayer.",
+    "line3": "If the following prayer reflects what is in your heart, please speak it aloud and pray to Jesus.",
+    "line4": "Jesus, I invite you into my heart.",
+    "line5": "Please forgive all my sins.",
+    "line6": "Please become my Savior and the Lord of my life.",
+    "line7": "I pray in the name of the Lord Jesus. Amen."
+  },
+  "welcome": {
+    "title": "Welcome to Tokyo International Christian Fellowship",
+    "line1": "Thank you for visiting our website. We hope that friends who have never been to a church, or are looking for a church, can learn about TICF Ikebukuro Church through this website. Our church was established in October 2019 and is an orthodox Christian church. It primarily serves Chinese people living in Japan, foreigners who speak Chinese, and Japanese people, and holds bilingual Chinese-Japanese services every Sunday. Services in other languages are also being planned.",
+    "line2": "Living in a foreign country sometimes requires deep reflection on truly important matters such as faith and life, and sometimes we need someone to listen to our daily troubles. At such times, having a group that speaks your native language is essential.",
+    "line3": "TICF Ikebukuro Church hopes to become",
+    "line4": "your family in Japan."
+  },
+  "our-mission": {
+    "title": "Our Mission",
+    "line1": "To make disciples of all nations for Jesus Christ,",
+    "line2": "baptizing them in the name of the Father, the Son, and the Holy Spirit.",
+    "line3": "Teaching them to obey all that Jesus Christ has commanded us.",
+    "line4": "(Matthew 28:19-20)"
+  },
+  "our-vision": {
+    "title": "Our Vision",
+    "gathering": "Gathering",
+    "growing": "Growing",
+    "going": "Going Out",
+    "line1": "We welcome people from all countries and regions to build a community full of love and vitality,",
+    "line2": "through which every person’s life is transformed by Christ,",
+    "line3": "going out to proclaim the good news (the Gospel) to everyone, influencing the cities, countries, and even the entire world where we live."
+  },
+  "our-core-value": {
+    "title": "Our Core Values",
+    "faith": "Faith",
+    "hope": "Hope",
+    "love": "Love",
+    "line1": "It is the faith in what is hoped for. Even if it is not visible to the naked eye,",
+    "line2": "because we know that God has promised, we take a courageous step of faith in Him.",
+    "line3": "Looking forward, there are many hardships; looking back, all tears.",
+    "line4": "We only look upward, and God will surely grant us hope.",
+    "line5": "Only God has unconditional love.",
+    "line6": "We accept God's unconditional love, are reborn, and walk with God.",
+    "line7": "Now, abiding in faith, hope, and love—of these, the greatest is love.",
+    "line8": "(1 Corinthians 13:13)"
+  },
+  "our-faith-statment": {
+    "title": "Our Statement of Faith",
+    "the-scriptures": "The Scriptures",
+    "god": "God",
+    "jesus-christ": "Jesus Christ",
+    "the-holy-spirit": "The Holy Spirit",
+    "the-condition-of-people": "The Condition of Humanity",
+    "the-work-of-christ": "The Work of Jesus Christ",
+    "salvation": "Salvation",
+    "the-church": "The Church",
+    "eternal-state": "The Eternal Destiny of Humanity",
+    "line1": "We believe that the Scriptures were revealed by God through oral dictation. The original texts of the Scriptures are completely correct. We believe that the Scriptures are the authority for faith and life. (2 Timothy 3:15-17; 2 Peter 1:20; Psalms 19:7-9)",
+    "line2": "We believe in the one true God, who exists eternally in the form of a Trinity—Father, Son, and Holy Spirit—and possesses the same attributes and perfection. (Genesis 1:1, Deuteronomy 6:4, Matthew 28:19, John 10:30, 2 Corinthians 13:14)",
+    "line3": "We believe that Jesus Christ is God (John 10:33). We believe that He was born of a virgin (Isaiah 7:17, Matthew 1:23, Luke 1:34-35); we believe that He is a sinless righteous man (Hebrews 4:15, 7:26); we believe that He performed miracles (John 2:11); we believe that He died for the sins of the world (1 Corinthians 15:3, Ephesians 1:7, Hebrews 2:9); we believe in His resurrection (John 11:25, 1 Corinthians 15:4); we believe that He ascended and sits at the right hand of the Father (Mark 16:19); we believe that He will return with power and glory in the future (Acts 1:11, Revelation 19:11-16).",
+    "line4": "We believe that the Holy Spirit, the third person of the Trinity, dwells in the hearts of all true believers. We believe that true believers are united through the Holy Spirit. We believe that the Holy Spirit enables obedient believers to live in the likeness of God and continuously bestows grace to strengthen the body of the Lord.",
+    "line5": "We believe that humanity was created in the image of God, and that the first humans were sinless and holy. But through Adam's sin, humanity fell, inheriting a sinful nature, experiencing spiritual death, and being separated from God. We believe that humanity cannot save itself from sin.",
+    "line6": "We believe that God's eternal Son, Jesus Christ, became flesh to reveal God and to save sinners. We believe that Jesus Christ voluntarily gave His life in our place on the cross to demonstrate God's righteousness and judgment. We believe that God's only means of salvation is through Jesus Christ's sacrifice, and that through His death, God was reconciled with humanity. We believe that Jesus Christ is the way, the truth, and the life. No one can come to the Father except through Him.",
+    "line7": "We believe that our rescue from the punishment of sin is a grace from God, not attainable by any work, and that only those who believe in the work of Jesus Christ on the cross can be saved. All who believe in Jesus Christ will have their sins washed away and be reborn as children of God through the work of the Holy Spirit.",
+    "line8": "We believe that the Church, which the Scriptures refer to as the body of Jesus Christ, is a spiritual organization and that every believer is a part of it. We also believe that the Scriptures acknowledge the establishment and continuation of the Church, gathering believers together for worship, teaching, and fellowship.",
+    "line9": "We believe that at the moment of death, all souls who believe in the message of salvation through Jesus Christ will immediately enter the presence of the Lord to await resurrection. We believe that all souls who do not believe in the message of salvation through Jesus Christ will immediately be separated from the Lord, awaiting judgment and the eternal consequence of unbelief."
+  },
+  "worship-service-information": {
+    "title": "Worship Service Information",
+    "ticf-ueno-name": "TICF Ueno Church",
+    "ticf-ueno-time": "Time: Every Sunday, 10:30 AM - 12:00 PM (Bilingual Chinese-Japanese Service)",
+    "ticf-ueno-address-line1": "Location: 〒110-0015, 1-2-13 Higashi-Ueno, Taito-ku, Tokyo",
+    "ticf-ueno-address-line2": "4th Floor, Carnie Place, Shin-Okachimachi",
+    "ticf-ueno-map": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d103754.9504467574!2d139.76298!3d35.6439397!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ea311bfe483%3A0xaaccf82657754103!2z44CSMTEwLTAwMTUgVG9reW8sIFRhaXRvIENpdHksIEhpZ2FzaGl1ZW5vLCAxLWNoxY1tZeKIkjLiiJIxMiDjgqvjg7zjg4vjg7zjg5fjg6zjgqTjgrnmlrDlvqHlvpLnlLo!5e0!3m2!1szh-CN!2sjp!4v1739873938779!5m2!1szh-CN!2sjp",
+    "ticf-ikebukuro-name": "TICF Ikebukuro Church",
+    "ticf-ikebukuro-time": "Time: Every Sunday, 2:00 PM - 4:00 PM (Bilingual Chinese-Japanese Service)",
+    "ticf-ikebukuro-address-line1": "Location: 〒171-0021, 1-10-15 Nishi-Ikebukuro, Toshima-ku, Tokyo, 4th or 5th Floor",
+    "ticf-ikebukuro-address-line2": "YR Event Hall (This address is for a rented meeting room, please do not send mail or items)",
+    "ticf-ikebukuro-map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1911.4775716504291!2d139.71069902678082!3d35.72770391081851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d54008b1227%3A0xb5a8309c4b2bbc54!2sTICF%20Ikebukuro%20Church!5e0!3m2!1szh-CN!2sjp!4v1739873793171!5m2!1szh-CN!2sjp"
+  },
+  "contact": {
+    "title": "Contact Information",
+    "email": "info@ticf-ic.com"
+  },
+  "footer": {
+    "copyright": "Copyright(c) 2019 TICF All Rights Reserved."
   }
 }
