@@ -25,5 +25,5 @@
       "@/locales/*": ["./src/locales/*"]
     }
   },
-  "include": ["src", "vite.config.ts"]
+  "include": ["src", "vite.config.mts"]
 }
