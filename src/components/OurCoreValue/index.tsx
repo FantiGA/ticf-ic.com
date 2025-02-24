@@ -5,7 +5,10 @@ export const OurCoreValue = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col justify-center pt-8 pb-10 space-y-9">
+    <div
+      id="our-core-value"
+      className="flex flex-col justify-center pt-8 pb-10 space-y-9"
+    >
       <h3 className="text-center text-2xl md:text-5xl">
         <RoundedTitle>{t("our-core-value.title")}</RoundedTitle>
       </h3>
@@ -28,13 +31,18 @@ export const OurCoreValue = () => {
             <h4 className="text-4xl">{t("our-core-value.hope")}</h4>
             <p>{t("our-core-value.line3")}</p>
             <p>{t("our-core-value.line4")}</p>
+            <p>{t("our-core-value.line5")}</p>
           </div>
           <div className="space-y-4">
             <h4 className="text-4xl">{t("our-core-value.love")}</h4>
-            <p>{t("our-core-value.line5")}</p>
             <p>{t("our-core-value.line6")}</p>
             <p>{t("our-core-value.line7")}</p>
+          </div>
+          <div className="space-y-4">
+            <br />
             <p>{t("our-core-value.line8")}</p>
+            <p>{t("our-core-value.line9")}</p>
+            <p>{t("our-core-value.line10")}</p>
           </div>
         </div>
       </div>

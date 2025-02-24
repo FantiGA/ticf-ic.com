@@ -5,7 +5,10 @@ export const OurMission = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="flex flex-col justify-center pt-8 pb-10 space-y-9">
+    <div
+      id="our-mission"
+      className="flex flex-col justify-center pt-8 pb-10 space-y-9"
+    >
       <h3 className="text-center text-2xl md:text-5xl">
         <RoundedTitle>{t("our-mission.title")}</RoundedTitle>
       </h3>

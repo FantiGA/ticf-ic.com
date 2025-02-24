@@ -17,7 +17,7 @@ const MenuContent: FC<MenuContentProps> = ({ setIsActive }) => {
       });
     }
 
-    setIsActive(false);
+    // setIsActive(false);
   };
 
   return (
