@@ -9,6 +9,18 @@ function App() {
   useEffect(() => {
     document.title = t("header.title");
 
+    const metaKeywords = document.querySelector(
+      'meta[name="keywords"]',
+    ) as HTMLMetaElement;
+    if (metaKeywords) {
+      metaKeywords.content = t("header.keywords");
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "keywords";
+      meta.content = t("header.keywords");
+      document.head.appendChild(meta);
+    }
+
     const metaDescription = document.querySelector(
       'meta[name="description"]',
     ) as HTMLMetaElement;
