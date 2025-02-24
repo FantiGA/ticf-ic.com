@@ -24,10 +24,8 @@ export const Header = () => {
         </div>
       </div>
 
-      {/* 菜单显示\隐藏 */}
-      {isActive && <MenuContent setIsActive={setIsActive} />}
+      {isActive && <MenuContent />}
 
-      {/* button TOP */}
       <GoToTop />
     </>
   );
