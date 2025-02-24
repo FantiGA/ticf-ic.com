@@ -9,7 +9,7 @@ export type LocaleType = (typeof SUPPORTED_LANGUAGES)[number];
 
 interface TranslationDictionary {
   [key: string]: {
-    [key: string]: string;
+    [key: string]: string | { [key: string]: string };
   };
 }
 

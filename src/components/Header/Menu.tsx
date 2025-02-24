@@ -13,17 +13,17 @@ const Menu: FC<MenuProps> = ({ isActive, setIsActive }) => {
     <div className="cursor-pointer" onClick={() => setIsActive(!isActive)}>
       <div className="group flex flex-col items-center w-14 h-12 relative">
         <span
-          className={`block w-13 h-[1px] bg-black transition-transform duration-300 ${
+          className={`block w-13 h-[1px] bg-black dark:bg-white transition-transform duration-300 ${
             isActive ? "translate-y-[19px] rotate-45" : ""
           }`}
         />
         <span
-          className={`block w-13 h-[1px] bg-black mt-[18px] transition-opacity duration-300 ${
+          className={`block w-13 h-[1px] bg-black dark:bg-white mt-[18px] transition-opacity duration-300 ${
             isActive ? "opacity-0" : ""
           }`}
         />
         <span
-          className={`block w-13 h-[1px] bg-black mt-[18px] transition-transform duration-300 ${
+          className={`block w-13 h-[1px] bg-black dark:bg-white mt-[18px] transition-transform duration-300 ${
             isActive ? "-translate-y-[19px] -rotate-45" : ""
           }`}
         />
