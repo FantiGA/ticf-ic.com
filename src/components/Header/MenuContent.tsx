@@ -21,7 +21,7 @@ const MenuContent: FC<MenuContentProps> = ({ setIsActive }) => {
   };
 
   return (
-    <div className="w-full overflow-hidden bg-white absolute top-[130px] z-[9999] font-semibold transition-all duration-300">
+    <div className="w-full overflow-hidden bg-white absolute top-24 md:top-32 z-[9999] font-semibold transition-all duration-300">
       <ul className="p-0 m-0">
         <li
           className="w-full h-16 text-center text-lg border-t border-black flex justify-center items-center cursor-pointer"

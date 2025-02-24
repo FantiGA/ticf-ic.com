@@ -9,9 +9,9 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center mr-4 space-y-1">
+    <div className="flex flex-col justify-center items-center mr-1 md:mr-4 space-y-1">
       <button
-        className={`cursor-pointer text-center w-[110px] text-[20px] transition-colors duration-300 ${
+        className={`cursor-pointer text-center w-24 md:w-28 text-xl transition-colors duration-300 ${
           i18n.language === "en"
             ? "bg-blue-500 text-white"
             : "hover:bg-blue-300"
@@ -21,7 +21,7 @@ const LanguageSwitcher = () => {
         {t("language.en")}
       </button>
       <button
-        className={`cursor-pointer text-center w-[110px] text-[20px] transition-colors duration-300 ${
+        className={`cursor-pointer text-center w-24 md:w-28 text-xl transition-colors duration-300 ${
           i18n.language === "ja"
             ? "bg-blue-500 text-white"
             : "hover:bg-blue-300"
@@ -31,7 +31,7 @@ const LanguageSwitcher = () => {
         {t("language.ja")}
       </button>
       <button
-        className={`cursor-pointer text-center w-[110px] text-[20px] transition-colors duration-300 ${
+        className={`cursor-pointer text-center w-24 md:w-28 text-xl transition-colors duration-300 ${
           i18n.language === "zh-CN"
             ? "bg-blue-500 text-white"
             : "hover:bg-blue-300"

@@ -4,14 +4,14 @@ const PrayerText = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="relative z-10 flex items-center justify-center h-full text-white left-1/5">
-      <div className="max-w-2xl">
-        <h3 className="text-xl md:text-3xl font-bold mb-4">
-          {t("prayer-text.corinthians15-3")}
-          <br />
-          {t("prayer-text.corinthians15-4")}
-        </h3>
-        <div className="mt-6 text-base md:text-xl space-y-6">
+    <div className="relative z-10 flex items-center justify-center h-full text-white  md:left-1/5">
+      <div className="max-w-11/12 md:max-w-2xl">
+        <div className="mt-6 text-xl space-y-8">
+          <h3 className="text-3xl font-bold">
+            {t("prayer-text.corinthians15-3")}
+            <br />
+            {t("prayer-text.corinthians15-4")}
+          </h3>
           <div>
             <p>{t("prayer-text.corinthians15")}</p>
           </div>

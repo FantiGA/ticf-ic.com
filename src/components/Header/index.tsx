@@ -10,11 +10,11 @@ export const Header = () => {
 
   return (
     <>
-      <div className="w-full h-[130px] flex justify-between items-center">
-        <div className="ml-9">
+      <div className="w-full h-24 md:h-32 flex justify-between items-center">
+        <div className="ml-1 md:ml-9 mr-2 md:mr-0">
           <Logo />
         </div>
-        <div className="mr-10 flex justify-between items-center">
+        <div className="mr-1 md:mr-10 flex justify-between items-center">
           <div>
             <LanguageSwitcher />
           </div>
