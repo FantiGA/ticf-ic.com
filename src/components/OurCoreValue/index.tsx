@@ -11,7 +11,12 @@ export const OurCoreValue = () => {
       </h3>
       <div className="mx-[5%] md:mx-[15%] text-lg space-y-6 text-center flex flex-col md:flex-row justify-between items-center">
         <div>
-          <img src="/images/img03.png" />
+          <img
+            src="/images/img03.png"
+            alt={t("our-core-value.title")}
+            width={373}
+            height={366}
+          />
         </div>
         <div className="space-y-6">
           <div className="space-y-4">

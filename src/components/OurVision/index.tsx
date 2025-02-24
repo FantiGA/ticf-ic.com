@@ -23,6 +23,14 @@ export const OurVision = () => {
           <p>{t("our-vision.line3")}</p>
         </div>
       </div>
+      <div className="flex justify-center">
+        <img
+          src="/images/img022.png"
+          alt={t("our-vision.title")}
+          width={400}
+          height={188}
+        />
+      </div>
     </div>
   );
 };

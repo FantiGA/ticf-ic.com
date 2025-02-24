@@ -18,7 +18,12 @@ export const Contact = () => {
           </h4>
         </div>
         <div className="flex justify-center">
-          <img src="/images/img04.png" />
+          <img
+            src="/images/img04.png"
+            alt={t("contact.title")}
+            width={728}
+            height={490}
+          />
         </div>
       </div>
     </div>
