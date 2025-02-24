@@ -107,6 +107,9 @@
     "email": "info@ticf-ic.com"
   },
   "footer": {
-    "copyright": "Copyright(c) 2019 TICF All Rights Reserved."
+    "copyright": {
+      "line1": "Copyright \u00A9 2019-",
+      "line2": "TICF All Rights Reserved."
+    }
   }
 }

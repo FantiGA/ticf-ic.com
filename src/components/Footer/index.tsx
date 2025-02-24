@@ -1,9 +1,13 @@
-const Footer = () => (
-  <div className="bottom">
-    <p className="text-xs">
-      Copyright &copy; 2019-{new Date().getFullYear()} TICF All Rights Reserved.
-    </p>
-  </div>
-);
+import { useTranslation } from "react-i18next";
 
-export default Footer;
+export const Footer = () => {
+  const { t } = useTranslation();
+
+  return (
+    <div className="flex justify-center mt-10 md:mt-24 mb-4">
+      <p className="text-xs">
+        {`${t("footer.copyright.line1")}${new Date().getFullYear()} ${t("footer.copyright.line2")}`}
+      </p>
+    </div>
+  );
+};

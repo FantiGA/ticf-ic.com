@@ -5,7 +5,7 @@ import GoToTop from "./GoToTop";
 import Menu from "./Menu";
 import MenuContent from "./MenuContent";
 
-const Header = () => {
+export const Header = () => {
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -32,5 +32,3 @@ const Header = () => {
     </>
   );
 };
-
-export default Header;

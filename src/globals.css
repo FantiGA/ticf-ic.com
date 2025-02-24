@@ -22,6 +22,10 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+    font-family:
+      "-apple-system", BlinkMacSystemFont, "Yu Gothic", "游ゴシック", YuGothic,
+      "游ゴシック体", "Noto Sans Japanese", "ヒラギノ角ゴ Pro W3", "メイリオ",
+      "Hiragino Kaku Gothic ProN", "MS PGothic", Osaka, "sans-serif";
   }
 }
 
@@ -47,4 +51,20 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-banner01 {
+  background-image: url("/images/banner01.jpg");
+}
+
+.bg-banner02 {
+  background-image: url("/images/banner02.jpg");
+}
+
+.bg-banner01s {
+  background-image: url("/images/banner01-s.jpg");
+}
+
+.bg-banner02s {
+  background-image: url("/images/banner02-s.jpg");
 }

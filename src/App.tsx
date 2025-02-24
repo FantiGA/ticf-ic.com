@@ -1,8 +1,7 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import "@/utils/i18n-config";
+import { Banner, Footer, Header, Welcome } from "@/components";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -26,6 +25,8 @@ function App() {
   return (
     <>
       <Header />
+      <Banner />
+      <Welcome />
       <Footer />
     </>
   );
