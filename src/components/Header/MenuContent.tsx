@@ -1,11 +1,6 @@
-import type { Dispatch, FC, SetStateAction } from "react";
 import { useTranslation } from "react-i18next";
 
-interface MenuContentProps {
-  setIsActive: Dispatch<SetStateAction<boolean>>;
-}
-
-const MenuContent: FC<MenuContentProps> = ({ setIsActive }) => {
+const MenuContent = () => {
   const { t } = useTranslation();
 
   const scrollToTarget = (target: string) => {
@@ -16,8 +11,6 @@ const MenuContent: FC<MenuContentProps> = ({ setIsActive }) => {
         behavior: "smooth",
       });
     }
-
-    // setIsActive(false);
   };
 
   return (
