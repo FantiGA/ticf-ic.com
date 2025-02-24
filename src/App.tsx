@@ -1,9 +1,20 @@
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import "@/utils/i18n-config";
-import { Banner, Footer, Header, Welcome } from "@/components";
+import {
+  Banner,
+  Contact,
+  Footer,
+  Header,
+  OurCoreValue,
+  OurFaithStatment,
+  OurMission,
+  OurVision,
+  Welcome,
+  WorshipServiceInformation,
+} from "@/components";
 
-function App() {
+const App = () => {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
@@ -39,9 +50,15 @@ function App() {
       <Header />
       <Banner />
       <Welcome />
+      <OurMission />
+      <OurVision />
+      <OurCoreValue />
+      <OurFaithStatment />
+      <WorshipServiceInformation />
+      <Contact />
       <Footer />
     </>
   );
-}
+};
 
 export default App;

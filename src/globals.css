@@ -5,6 +5,8 @@
   --color-foreground: var(--foreground);
 
   --color-normal-black: #221714;
+  --color-normal-blue: #008cd6;
+  --color-light-blue: #82c1ea;
 }
 
 /*
