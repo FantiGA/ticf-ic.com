@@ -4,8 +4,8 @@ const PrayerText = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="relative z-10 flex items-center justify-center h-full text-white lg:left-1/5">
-      <div className="max-w-11/12 md:max-w-3xl">
+    <div className="relative z-10 flex items-center justify-center h-full text-white lg:left-1/8 xl:left-1/5">
+      <div className="max-w-11/12 md:max-w-4xl">
         <div className="mt-6 text-xl space-y-8">
           <h3 className="text-3xl font-bold">
             {t("prayer-text.corinthians15-3")}

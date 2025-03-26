@@ -11,7 +11,7 @@ const Menu: FC<MenuProps> = ({ isActive, setIsActive }) => {
 
   return (
     <div className="cursor-pointer" onClick={() => setIsActive(!isActive)}>
-      <div className="group flex flex-col items-center w-14 h-12 relative">
+      <div className="group flex flex-col items-center w-14 h-12">
         <span
           className={`block w-13 h-[1px] bg-black dark:bg-white transition-transform duration-300 ${
             isActive ? "translate-y-[19px] rotate-45" : ""

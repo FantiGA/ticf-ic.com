@@ -10,7 +10,7 @@ export const Header = () => {
 
   return (
     <>
-      <div className="w-full h-24 md:h-32 flex justify-between items-center">
+      <div className="fixed w-full h-24 md:h-32 bg-white dark:bg-background flex justify-between items-center border-b border-normal-black dark:border-foreground z-10">
         <div className="ml-1 md:ml-9 mr-2 md:mr-0">
           <Logo />
         </div>
@@ -24,7 +24,7 @@ export const Header = () => {
         </div>
       </div>
 
-      {isActive && <MenuContent />}
+      {isActive && <MenuContent setIsActive={setIsActive} />}
 
       <GoToTop />
     </>
