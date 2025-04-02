@@ -18,6 +18,19 @@ const App = () => {
   const { t, i18n } = useTranslation();
 
   useEffect(() => {
+    const userLanguage = navigator.language;
+    let selectedLanguage = "en";
+
+    if (userLanguage.includes("zh")) {
+      selectedLanguage = "zh-CN";
+    } else if (userLanguage.includes("ja")) {
+      selectedLanguage = "ja";
+    }
+
+    i18n.changeLanguage(selectedLanguage);
+  }, [i18n]);
+
+  useEffect(() => {
     document.title = t("header.title");
 
     const metaKeywords = document.querySelector(
