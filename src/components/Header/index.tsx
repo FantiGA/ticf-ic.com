@@ -10,7 +10,7 @@ export const Header = () => {
 
   return (
     <>
-      <div className="fixed w-full h-24 md:h-32 bg-white dark:bg-background flex justify-between items-center border-b border-normal-black dark:border-foreground z-10">
+      <div className="fixed w-full h-24 md:h-32 bg-white dark:bg-background flex justify-between items-center border-b border-normal-black dark:border-foreground z-999">
         <div className="ml-1 md:ml-9 mr-2 md:mr-0">
           <Logo />
         </div>

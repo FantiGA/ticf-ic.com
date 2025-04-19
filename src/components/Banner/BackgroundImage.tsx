@@ -19,13 +19,13 @@ const BackgroundImage = () => {
     <>
       <div
         className={clsx(
-          "absolute h-[830px] block md:hidden inset-0 bg-fixed bg-cover bg-center transition-opacity duration-1000",
+          "absolute block md:hidden inset-0 bg-fixed bg-cover bg-center transition-opacity duration-1000",
           spImages[index],
         )}
       />
       <div
         className={clsx(
-          "absolute h-[830px] hidden md:block inset-0 bg-fixed bg-cover bg-center transition-opacity duration-1000",
+          "absolute hidden md:block inset-0 bg-fixed bg-cover bg-center transition-opacity duration-1000",
           pcImages[index],
         )}
       />

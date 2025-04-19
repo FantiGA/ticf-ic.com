@@ -11,8 +11,9 @@ const MenuContent: FC<MenuContentProps> = ({ setIsActive }) => {
   const scrollToTarget = (target: string) => {
     const element = document.querySelector(target);
     if (element) {
+      const offset = window.innerWidth >= 768 ? 127 : 95;
       window.scrollTo({
-        top: element.getBoundingClientRect().top + window.scrollY,
+        top: element.getBoundingClientRect().top + window.scrollY - offset,
         behavior: "smooth",
       });
       setIsActive(false);
