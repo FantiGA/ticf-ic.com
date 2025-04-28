@@ -10,6 +10,13 @@ const nextConfig: NextConfig = {
   //   locales: ["en", "zh-CN", "ja"],
   //   defaultLocale: "en",
   // },
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': __dirname,
+    };
+    return config;
+  },
 };
 
 export default withNextIntl("./utils/request.tsx")(nextConfig);

@@ -1,50 +1,87 @@
-# React + TypeScript + Vite
+# TICF (Tokyo International Christian Fellowship)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**English** | [日本語](README.ja.md) | [简体中文](README.zh-CN.md)
 
-Currently, two official plugins are available:
+[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [TICF (Tokyo International Christian Fellowship)](#ticf-tokyo-international-christian-fellowship)
+  - [Overview](#overview)
+  - [Installation](#installation)
+  - [Configuration](#configuration)
+  - [Components](#components)
+  - [Multi-language Support](#multi-language-support)
+  - [Maintainers](#maintainers)
+  - [License](#license)
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Welcome in Christ.
 
-- Configure the top-level `parserOptions` property like this:
+This project is a website for the Tokyo International Christian Fellowship (TICF). It is built using React, TypeScript, Vite, and Tailwind CSS, and supports multiple languages including English, Chinese, and Japanese.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+## Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Clone the repository:
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
+   ```sh
+   git clone https://github.com/FantiGA/ticf-ic.com.git
+   cd ticf-ic.com
+   ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
-```
+2. Install dependencies:
+
+   ```sh
+   npm install
+   ```
+
+3. Run the development server:
+
+   ```sh
+   npm run dev
+   ```
+
+4. Build the project:
+
+   ```sh
+   npm run build
+   ```
+
+5. Export static files:
+   ```sh
+   npm run export
+   ```
+
+## Configuration
+
+To configure the project, update the `tsconfig.json` and `vite.config.ts` files as needed. Ensure that the path aliases are correctly set up for the project structure.
+
+## Components
+
+The project is divided into several components located in the `src/components` directory. Each component is responsible for a specific part of the website. For example:
+
+- `Header`: Contains the navigation bar and language switcher.
+- `Banner`: Displays the main banner image.
+- `Welcome`: Provides a welcome message.
+- `OurMission`: Describes the mission of the church.
+- `OurVision`: Describes the vision of the church.
+- `OurCoreValue`: Lists the core values of the church.
+- `OurFaithStatment`: Provides the faith statement.
+- `WorshipServiceInformation`: Contains information about worship services.
+- `Contact`: Provides contact information.
+- `Footer`: Contains the footer of the website.
+
+## Multi-language Support
+
+The project supports multiple languages using `i18next` and `react-i18next`. The translation files are located in the `src/locales` directory. To add or modify translations, update the corresponding JSON files:
+
+- `en.json`: English translations
+- `ja.json`: Japanese translations
+- `zh-CN.json`: Chinese translations
+
+## Maintainers
+
+[@FantiGA](https://github.com/FantiGA) [@wangbodang](https://github.com/wangbodang)
+
+## License
+
+[MIT](LICENSE) © 2025 [TICF](https://ticf-ic.com)
