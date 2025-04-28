@@ -1,113 +1,405 @@
 "use client";
 
-import { useEffect } from "react";
+import { useState } from "react";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 interface ClientPageProps {
   initialTranslations: {
-    title: string;
-    description: string;
-    image: string;
+    header: {
+      title: string;
+      keywords: string;
+      description: string;
+    };
+    language: {
+      "zh-CN": string;
+      en: string;
+      ja: string;
+    };
+    menu: {
+      menu: string;
+      close: string;
+    };
+    chapter: {
+      "our-mission": string;
+      "our-vision": string;
+      "our-core-value": string;
+      "our-faith-statment": string;
+      "worship-service-information": string;
+      contact: string;
+    };
+    "prayer-text": {
+      "corinthians15-3": string;
+      "corinthians15-4": string;
+      corinthians15: string;
+      line1: string;
+      line2: string;
+      line3: string;
+      line4: string;
+      line5: string;
+      line6: string;
+      line7: string;
+    };
+    welcome: {
+      title: string;
+      title2: string;
+      line1: string;
+      line2: string;
+      line3: string;
+      line4: string;
+    };
+    "our-mission": {
+      title: string;
+      line1: string;
+      line2: string;
+      line3: string;
+      line4: string;
+    };
+    "our-vision": {
+      title: string;
+      gathering: string;
+      growing: string;
+      going: string;
+      line1: string;
+      line2: string;
+      line3: string;
+    };
+    "our-core-value": {
+      title: string;
+      faith: string;
+      hope: string;
+      love: string;
+      line1: string;
+      line2: string;
+      line3: string;
+      line4: string;
+      line5: string;
+      line6: string;
+      line7: string;
+      line8: string;
+      line9: string;
+      line10: string;
+    };
+    "our-faith-statment": {
+      title: string;
+      "the-scriptures": string;
+      god: string;
+      "jesus-christ": string;
+      "the-holy-spirit": string;
+      "the-condition-of-people": string;
+      "the-work-of-christ": string;
+      salvation: string;
+      "the-church": string;
+      "eternal-state": string;
+      line1: string;
+      line2: string;
+      line3: string;
+      line4: string;
+      line5: string;
+      line6: string;
+      line7: string;
+      line8: string;
+      line9: string;
+      line10: string;
+      line11: string;
+      line12: string;
+    };
+    "worship-service-information": {
+      title: string;
+      "service-time": string;
+      "service-location": string;
+      "service-address": string;
+      "service-map": string;
+      "service-note": string;
+    };
+    contact: {
+      title: string;
+      "contact-info": string;
+      "contact-email": string;
+      "contact-phone": string;
+      "contact-address": string;
+      "contact-map": string;
+    };
   };
 }
 
 export default function ClientPage({ initialTranslations }: ClientPageProps) {
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      // 更新页面标题
-      document.title = initialTranslations.title;
-
-      // 更新 meta description
-      const metaDescription = document.querySelector(
-        'meta[name="description"]',
-      ) as HTMLMetaElement;
-      if (metaDescription) {
-        metaDescription.content = initialTranslations.description;
-      } else {
-        const meta = document.createElement("meta");
-        meta.name = "description";
-        meta.content = initialTranslations.description;
-        document.head.appendChild(meta);
-      }
-
-      // 添加 OpenGraph 和 Twitter 卡片元数据
-      const metaImage = document.querySelector(
-        'meta[property="og:image"]',
-      ) as HTMLMetaElement;
-      if (metaImage) {
-        metaImage.content = initialTranslations.image;
-      } else {
-        const meta = document.createElement("meta");
-        meta.setAttribute("property", "og:image");
-        meta.content = initialTranslations.image;
-        document.head.appendChild(meta);
-      }
-
-      const metaTitle = document.querySelector(
-        'meta[property="og:title"]',
-      ) as HTMLMetaElement;
-      if (metaTitle) {
-        metaTitle.content = initialTranslations.title;
-      } else {
-        const meta = document.createElement("meta");
-        meta.setAttribute("property", "og:title");
-        meta.content = initialTranslations.title;
-        document.head.appendChild(meta);
-      }
-
-      const metaDescriptionOg = document.querySelector(
-        'meta[property="og:description"]',
-      ) as HTMLMetaElement;
-      if (metaDescriptionOg) {
-        metaDescriptionOg.content = initialTranslations.description;
-      } else {
-        const meta = document.createElement("meta");
-        meta.setAttribute("property", "og:description");
-        meta.content = initialTranslations.description;
-        document.head.appendChild(meta);
-      }
-
-      const twitterMetaTitle = document.querySelector(
-        'meta[name="twitter:title"]',
-      ) as HTMLMetaElement;
-      if (twitterMetaTitle) {
-        twitterMetaTitle.content = initialTranslations.title;
-      } else {
-        const meta = document.createElement("meta");
-        meta.setAttribute("name", "twitter:title");
-        meta.content = initialTranslations.title;
-        document.head.appendChild(meta);
-      }
-
-      const twitterMetaDescription = document.querySelector(
-        'meta[name="twitter:description"]',
-      ) as HTMLMetaElement;
-      if (twitterMetaDescription) {
-        twitterMetaDescription.content = initialTranslations.description;
-      } else {
-        const meta = document.createElement("meta");
-        meta.setAttribute("name", "twitter:description");
-        meta.content = initialTranslations.description;
-        document.head.appendChild(meta);
-      }
-
-      const twitterMetaImage = document.querySelector(
-        'meta[name="twitter:image"]',
-      ) as HTMLMetaElement;
-      if (twitterMetaImage) {
-        twitterMetaImage.content = initialTranslations.image;
-      } else {
-        const meta = document.createElement("meta");
-        meta.setAttribute("name", "twitter:image");
-        meta.content = initialTranslations.image;
-        document.head.appendChild(meta);
-      }
-    }
-  }, [initialTranslations]);
+  const [translations] = useState(initialTranslations);
 
   return (
-    <div>
-      <h1>{initialTranslations.title}</h1>
-      <p>{initialTranslations.description}</p>
+    <div className="min-h-screen bg-white dark:bg-gray-900">
+      <header className="bg-white dark:bg-gray-900 shadow-md">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex justify-between items-center">
+            <div className="text-2xl font-bold">
+              {translations.header.title}
+            </div>
+            <nav>
+              <ul className="flex space-x-4">
+                <li>
+                  <a
+                    href="#welcome"
+                    className="hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    {translations.chapter["our-mission"]}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#our-mission"
+                    className="hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    {translations.chapter["our-mission"]}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#our-vision"
+                    className="hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    {translations.chapter["our-vision"]}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#our-core-value"
+                    className="hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    {translations.chapter["our-core-value"]}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#our-faith-statment"
+                    className="hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    {translations.chapter["our-faith-statment"]}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#worship-service-information"
+                    className="hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    {translations.chapter["worship-service-information"]}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    {translations.chapter.contact}
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main className="container mx-auto px-4 py-8">
+        <div className="flex justify-end mb-4">
+          <LanguageSwitcher />
+        </div>
+
+        {/* Welcome Section */}
+        <section id="welcome" className="mb-12">
+          <h1 className="text-3xl font-bold mb-4">
+            {translations.welcome.title}
+          </h1>
+          <p className="text-lg mb-4">{translations.welcome.line1}</p>
+          <p className="text-lg">{translations.welcome.line2}</p>
+        </section>
+
+        {/* Our Mission Section */}
+        <section id="our-mission" className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">
+            {translations["our-mission"].title}
+          </h2>
+          <p className="text-lg mb-2">{translations["our-mission"].line1}</p>
+          <p className="text-lg mb-2">{translations["our-mission"].line2}</p>
+          <p className="text-lg mb-2">{translations["our-mission"].line3}</p>
+          <p className="text-lg italic">{translations["our-mission"].line4}</p>
+        </section>
+
+        {/* Our Vision Section */}
+        <section id="our-vision" className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">
+            {translations["our-vision"].title}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["our-vision"].gathering}
+              </h3>
+              <p>{translations["our-vision"].line1}</p>
+            </div>
+            <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["our-vision"].growing}
+              </h3>
+              <p>{translations["our-vision"].line2}</p>
+            </div>
+            <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["our-vision"].going}
+              </h3>
+              <p>{translations["our-vision"].line3}</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Core Values Section */}
+        <section id="our-core-value" className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">
+            {translations["our-core-value"].title}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["our-core-value"].faith}
+              </h3>
+              <p className="mb-2">{translations["our-core-value"].line1}</p>
+              <p>{translations["our-core-value"].line2}</p>
+            </div>
+            <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["our-core-value"].hope}
+              </h3>
+              <p className="mb-2">{translations["our-core-value"].line3}</p>
+              <p className="mb-2">{translations["our-core-value"].line4}</p>
+              <p>{translations["our-core-value"].line5}</p>
+            </div>
+            <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["our-core-value"].love}
+              </h3>
+              <p className="mb-2">{translations["our-core-value"].line6}</p>
+              <p className="mb-2">{translations["our-core-value"].line7}</p>
+              <p className="mb-2">{translations["our-core-value"].line8}</p>
+              <p className="mb-2">{translations["our-core-value"].line9}</p>
+              <p className="italic">{translations["our-core-value"].line10}</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Faith Statement Section */}
+        <section id="our-faith-statment" className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">
+            {translations["our-faith-statment"].title}
+          </h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["our-faith-statment"]["the-scriptures"]}
+              </h3>
+              <p>{translations["our-faith-statment"].line1}</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["our-faith-statment"].god}
+              </h3>
+              <p>{translations["our-faith-statment"].line2}</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["our-faith-statment"]["jesus-christ"]}
+              </h3>
+              <p>{translations["our-faith-statment"].line5}</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["our-faith-statment"]["the-holy-spirit"]}
+              </h3>
+              <p>{translations["our-faith-statment"].line6}</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["our-faith-statment"]["the-condition-of-people"]}
+              </h3>
+              <p>{translations["our-faith-statment"].line3}</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["our-faith-statment"]["the-work-of-christ"]}
+              </h3>
+              <p>{translations["our-faith-statment"].line9}</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["our-faith-statment"].salvation}
+              </h3>
+              <p>{translations["our-faith-statment"].line10}</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["our-faith-statment"]["the-church"]}
+              </h3>
+              <p>{translations["our-faith-statment"].line11}</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["our-faith-statment"]["eternal-state"]}
+              </h3>
+              <p>{translations["our-faith-statment"].line12}</p>
+            </div>
+          </div>
+        </section>
+
+        {/* Worship Service Information Section */}
+        <section id="worship-service-information" className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">
+            {translations["worship-service-information"].title}
+          </h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["worship-service-information"]["service-time"]}
+              </h3>
+              <p>
+                {
+                  translations["worship-service-information"][
+                    "service-location"
+                  ]
+                }
+              </p>
+              <p>
+                {translations["worship-service-information"]["service-address"]}
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                {translations["worship-service-information"]["service-map"]}
+              </h3>
+              <p>
+                {translations["worship-service-information"]["service-note"]}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="mb-12">
+          <h2 className="text-2xl font-bold mb-4">
+            {translations.contact.title}
+          </h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                {translations.contact["contact-info"]}
+              </h3>
+              <p>{translations.contact["contact-email"]}</p>
+              <p>{translations.contact["contact-phone"]}</p>
+              <p>{translations.contact["contact-address"]}</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">
+                {translations.contact["contact-map"]}
+              </h3>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   );
 }

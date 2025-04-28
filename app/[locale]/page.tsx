@@ -1,24 +1,26 @@
-"use client";
-
+import { loadMessages, Locale, locales } from "@/utils/i18n";
 import ClientPage from "./ClientPage";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { usePathname } from "next/navigation";
-import en from "@/locales/en.json";
-import zhCN from "@/locales/zh-CN.json";
-import ja from "@/locales/ja.json";
+import { notFound } from "next/navigation";
 
-const translations = {
-  en,
-  "zh-CN": zhCN,
-  ja,
+export async function generateStaticParams() {
+  return locales.map((locale) => ({
+    locale,
+  }));
+}
+
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function Page() {
-  const pathname = usePathname();
-  const match = pathname.match(/^\/(en|zh-CN|ja)/);
-  const locale = match ? match[1] : "en";
-  const t =
-    translations[locale as keyof typeof translations] || translations.en;
+export default async function Page({ params }: Props) {
+  const resolvedParams = await params;
+
+  if (!locales.includes(resolvedParams.locale as Locale)) {
+    notFound();
+  }
+
+  const messages = await loadMessages(resolvedParams.locale as Locale);
 
   return (
     <div className="min-h-screen p-4">
@@ -28,9 +30,23 @@ export default function Page() {
         </div>
         <ClientPage
           initialTranslations={{
-            title: t.header.title,
-            description: t.header.description,
-            image: "/images/og-image.jpg",
+            header: {
+              title: messages.header.title,
+              keywords: messages.header.keywords,
+              description: messages.header.description,
+            },
+            language: messages.language,
+            menu: messages.menu,
+            chapter: messages.chapter,
+            "prayer-text": messages["prayer-text"],
+            welcome: messages.welcome,
+            "our-mission": messages["our-mission"],
+            "our-vision": messages["our-vision"],
+            "our-core-value": messages["our-core-value"],
+            "our-faith-statment": messages["our-faith-statment"],
+            "worship-service-information":
+              messages["worship-service-information"],
+            contact: messages.contact,
           }}
         />
       </div>
