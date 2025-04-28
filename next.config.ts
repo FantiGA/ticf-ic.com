@@ -1,14 +1,15 @@
-import type { NextConfig } from "next";
-/** @type {import('next').NextConfig} */
+import { NextConfig } from "next";
+import withNextIntl from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
-  i18n: {
-    locales: ["en", "ja", "zh-CN"],
-    defaultLocale: "en",
-  },
-  reactStrictMode: true,
-  // output: "export",
-  distDir: "./dist",
+  trailingSlash: true,
+  // Enable static export
+  output: "export",
+  // Disable i18n config as next-intl handles internationalization
+  // i18n: {
+  //   locales: ["en", "zh-CN", "ja"],
+  //   defaultLocale: "en",
+  // },
 };
 
-export default nextConfig;
+export default withNextIntl("./utils/request.tsx")(nextConfig);

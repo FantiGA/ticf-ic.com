@@ -20,8 +20,9 @@
       }
     ],
     "paths": {
-      "@/components/*": ["./app/[lang]/components/*"],
-      "@/i18n/*": ["./app/i18n/*"]
+      "@/components/*": ["./components/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/locales/*": ["./locales/*"]
     }
   },
   "include": [
@@ -29,7 +30,8 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "next-env.d.ts",
-    "./dist/types/**/*.ts"
+    "./dist/types/**/*.ts",
+    "next.config.js"
   ],
   "exclude": ["./node_modules"]
 }
