@@ -1,5 +1,4 @@
 import { NextConfig } from "next";
-import withNextIntl from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
@@ -19,4 +18,5 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default withNextIntl("./utils/request.tsx")(nextConfig);
+export default nextConfig;
+ 

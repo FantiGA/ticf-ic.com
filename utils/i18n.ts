@@ -1,11 +1,11 @@
-// 支持的语言列表
+// Supported languages list
 export const locales = ["en", "zh-CN", "ja"] as const;
 export type Locale = (typeof locales)[number];
 
-// 默认语言
+// Default language
 export const defaultLocale: Locale = "en";
 
-// 使用动态导入来加载翻译文件
+// Load translation files using dynamic import
 export const loadMessages = async (locale: Locale) => {
   const messages = await import(`../locales/${locale}.json`);
   return messages.default;

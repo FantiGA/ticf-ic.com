@@ -1,36 +1,42 @@
 "use client";
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import en from "@/locales/en.json";
-import zhCN from "@/locales/zh-CN.json";
-import ja from "@/locales/ja.json";
+import Script from "next/script";
+import { loadMessages } from "@/utils/i18n";
+import { Locale } from "@/utils/i18n";
 
-const translations = {
-  en,
-  "zh-CN": zhCN,
-  ja,
-};
-
-export default function HtmlWrapper({ children }: { children: ReactNode }) {
+export function HtmlWrapper({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const match = pathname.match(/^\/(en|zh-CN|ja)/);
-  const locale = match ? match[1] : "en";
-  const t =
-    translations[locale as keyof typeof translations] || translations.en;
+  const locale = (match ? match[1] : "en") as Locale;
+  const [t, setT] = useState<Awaited<ReturnType<typeof loadMessages>> | null>(
+    null,
+  );
+
+  useEffect(() => {
+    loadMessages(locale).then(setT);
+  }, [locale]);
+
+  if (!t) {
+    return <>Loading...</>;
+  }
 
   return (
-    <html lang={locale}>
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link type="image/x-icon" rel="icon" href="/favicon.ico" />
-        <title>{t.header.title}</title>
-        <meta name="description" content={t.header.description} />
-        <meta name="keywords" content={t.header.keywords} />
-        <meta name="author" content={t.header.title} />
-      </head>
-      <body className="bg-white text-gray-900">{children}</body>
-    </html>
+    <>
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-L21FKDK6YT"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-L21FKDK6YT');
+        `}
+      </Script>
+      {children}
+    </>
   );
 }

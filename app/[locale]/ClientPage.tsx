@@ -2,125 +2,13 @@
 
 import { useState } from "react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { TranslationKeys, TranslationSection } from "@/types/translations";
 
-interface ClientPageProps {
+type ClientPageProps = {
   initialTranslations: {
-    header: {
-      title: string;
-      keywords: string;
-      description: string;
-    };
-    language: {
-      "zh-CN": string;
-      en: string;
-      ja: string;
-    };
-    menu: {
-      menu: string;
-      close: string;
-    };
-    chapter: {
-      "our-mission": string;
-      "our-vision": string;
-      "our-core-value": string;
-      "our-faith-statment": string;
-      "worship-service-information": string;
-      contact: string;
-    };
-    "prayer-text": {
-      "corinthians15-3": string;
-      "corinthians15-4": string;
-      corinthians15: string;
-      line1: string;
-      line2: string;
-      line3: string;
-      line4: string;
-      line5: string;
-      line6: string;
-      line7: string;
-    };
-    welcome: {
-      title: string;
-      title2: string;
-      line1: string;
-      line2: string;
-      line3: string;
-      line4: string;
-    };
-    "our-mission": {
-      title: string;
-      line1: string;
-      line2: string;
-      line3: string;
-      line4: string;
-    };
-    "our-vision": {
-      title: string;
-      gathering: string;
-      growing: string;
-      going: string;
-      line1: string;
-      line2: string;
-      line3: string;
-    };
-    "our-core-value": {
-      title: string;
-      faith: string;
-      hope: string;
-      love: string;
-      line1: string;
-      line2: string;
-      line3: string;
-      line4: string;
-      line5: string;
-      line6: string;
-      line7: string;
-      line8: string;
-      line9: string;
-      line10: string;
-    };
-    "our-faith-statment": {
-      title: string;
-      "the-scriptures": string;
-      god: string;
-      "jesus-christ": string;
-      "the-holy-spirit": string;
-      "the-condition-of-people": string;
-      "the-work-of-christ": string;
-      salvation: string;
-      "the-church": string;
-      "eternal-state": string;
-      line1: string;
-      line2: string;
-      line3: string;
-      line4: string;
-      line5: string;
-      line6: string;
-      line7: string;
-      line8: string;
-      line9: string;
-      line10: string;
-      line11: string;
-      line12: string;
-    };
-    "worship-service-information": {
-      title: string;
-      "service-time": string;
-      "service-location": string;
-      "service-address": string;
-      "service-map": string;
-      "service-note": string;
-    };
-    contact: {
-      title: string;
-      "contact-info": string;
-      "contact-email": string;
-      "contact-phone": string;
-      "contact-address": string;
-      "contact-map": string;
-    };
+    [K in keyof TranslationKeys]: TranslationSection<K>;
   };
-}
+};
 
 export default function ClientPage({ initialTranslations }: ClientPageProps) {
   const [translations] = useState(initialTranslations);
@@ -403,3 +291,4 @@ export default function ClientPage({ initialTranslations }: ClientPageProps) {
     </div>
   );
 }
+ 

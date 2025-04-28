@@ -1,55 +1,39 @@
-import { loadMessages, Locale, locales } from "@/utils/i18n";
+import { loadMessages } from "@/utils/i18n";
 import ClientPage from "./ClientPage";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { notFound } from "next/navigation";
+import { Locale } from "@/utils/i18n";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
-  return locales.map((locale) => ({
-    locale,
-  }));
+  return [{ locale: "en" }, { locale: "zh-CN" }, { locale: "ja" }];
 }
 
-type Props = {
-  params: Promise<{ locale: string }>;
+type PageProps = {
+  params: Promise<{
+    locale: Locale;
+  }>;
 };
 
-export default async function Page({ params }: Props) {
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: Locale };
+}): Promise<Metadata> {
+  const messages = await loadMessages(params.locale);
+
+  return {
+    title: messages.header.title,
+    description: messages.header.description,
+    keywords: messages.header.keywords,
+    authors: [{ name: "Jun Wu" }],
+    viewport: "width=device-width, initial-scale=1.0",
+    icons: {
+      icon: "/favicon.ico",
+    },
+  };
+}
+
+export default async function Page({ params }: PageProps) {
   const resolvedParams = await params;
-
-  if (!locales.includes(resolvedParams.locale as Locale)) {
-    notFound();
-  }
-
-  const messages = await loadMessages(resolvedParams.locale as Locale);
-
-  return (
-    <div className="min-h-screen p-4">
-      <div className="max-w-4xl mx-auto">
-        <div className="flex justify-end mb-4">
-          <LanguageSwitcher />
-        </div>
-        <ClientPage
-          initialTranslations={{
-            header: {
-              title: messages.header.title,
-              keywords: messages.header.keywords,
-              description: messages.header.description,
-            },
-            language: messages.language,
-            menu: messages.menu,
-            chapter: messages.chapter,
-            "prayer-text": messages["prayer-text"],
-            welcome: messages.welcome,
-            "our-mission": messages["our-mission"],
-            "our-vision": messages["our-vision"],
-            "our-core-value": messages["our-core-value"],
-            "our-faith-statment": messages["our-faith-statment"],
-            "worship-service-information":
-              messages["worship-service-information"],
-            contact: messages.contact,
-          }}
-        />
-      </div>
-    </div>
-  );
+  const messages = await loadMessages(resolvedParams.locale);
+  return <ClientPage initialTranslations={messages} />;
 }

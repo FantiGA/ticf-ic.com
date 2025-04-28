@@ -15,10 +15,7 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/utils/*": ["./utils/*"],
-      "@/locales/*": ["./locales/*"]
+      "@/*": ["./*"]
     },
     "plugins": [
       {
