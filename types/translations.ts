@@ -70,18 +70,18 @@ export type TranslationKeys = {
     | "line12";
   "worship-service-information":
     | "title"
-    | "service-time"
-    | "service-location"
-    | "service-address"
-    | "service-map"
-    | "service-note";
-  contact:
-    | "title"
-    | "contact-info"
-    | "contact-email"
-    | "contact-phone"
-    | "contact-address"
-    | "contact-map";
+    | "ticf-ueno-name"
+    | "ticf-ueno-time"
+    | "ticf-ueno-address-line1"
+    | "ticf-ueno-address-line2"
+    | "ticf-ueno-map"
+    | "ticf-ikebukuro-name"
+    | "ticf-ikebukuro-time"
+    | "ticf-ikebukuro-address-line1"
+    | "ticf-ikebukuro-address-line2"
+    | "ticf-ikebukuro-map";
+  contact: "title" | "email";
+  footer: "copyright.line1" | "copyright.line2";
 };
 
 export type TranslationSection<T extends keyof TranslationKeys> = {

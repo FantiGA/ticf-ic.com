@@ -1,20 +1,10 @@
 "use client";
 
 import { ReactNode } from "react";
-import { Geist, Geist_Mono } from "next/font/google";
 import { HtmlWrapper } from "./[locale]/HtmlWrapper";
 import { Locale } from "@/utils/i18n";
 import { usePathname } from "next/navigation";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import "./globals.css";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const pathname = usePathname();
@@ -24,13 +14,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang={locale}>
       <body>
-        <HtmlWrapper>
-          <div
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-          >
-            {children}
-          </div>
-        </HtmlWrapper>
+        <HtmlWrapper>{children}</HtmlWrapper>
       </body>
     </html>
   );
