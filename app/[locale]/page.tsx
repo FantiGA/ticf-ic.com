@@ -3,16 +3,18 @@ import ClientPage from "./ClientPage";
 import { Locale } from "@/utils/i18n";
 import { Metadata } from "next";
 
-type PageProps = {
-  params: { locale: Locale };
-};
+interface PageProps {
+  params: Promise<{ locale: Locale }>;
+}
 
 export async function generateStaticParams() {
   return [{ locale: "en" }, { locale: "zh-CN" }, { locale: "ja" }];
 }
 
-export async function generateMetadata(props: PageProps): Promise<Metadata> {
-  const { locale } = props.params;
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { locale } = await params;
   const messages = await loadMessages(locale);
 
   return {
@@ -26,8 +28,8 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
   };
 }
 
-export default async function Page(props: PageProps) {
-  const { locale } = props.params;
+export default async function Page({ params }: PageProps) {
+  const { locale } = await params;
   const messages = await loadMessages(locale);
   return <ClientPage initialTranslations={messages} />;
 }
