@@ -1,8 +1,7 @@
+import { generateStaticParams } from "@/utils/i18n";
 import { ReactNode } from "react";
 
-export function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "zh-CN" }, { locale: "ja" }];
-}
+export { generateStaticParams };
 
 export default function Layout({ children }: { children: ReactNode }) {
   return <>{children}</>;

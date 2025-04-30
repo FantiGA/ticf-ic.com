@@ -2,8 +2,7 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
-
-const supportedLocales = ["en", "zh-CN", "ja"];
+import { locales } from "@/utils/i18n";
 
 export default function Home() {
   const router = useRouter();
@@ -11,13 +10,13 @@ export default function Home() {
   useEffect(() => {
     const browserLanguage = navigator.language.toLowerCase();
 
-    if (supportedLocales.includes(browserLanguage)) {
+    if (locales.includes(browserLanguage as (typeof locales)[number])) {
       router.push(`/${browserLanguage}`);
       return;
     }
 
     const languagePrefix = browserLanguage.split("-")[0];
-    const matchingLocale = supportedLocales.find((locale) =>
+    const matchingLocale = locales.find((locale) =>
       locale.startsWith(languagePrefix),
     );
 

@@ -18,7 +18,7 @@
 
 主内平安，欢迎访问。
 
-本项目是东京国际基督徒团契（TICF）的网站。它使用 React、TypeScript、Vite 和 Tailwind CSS 构建，并支持包括英语、中文和日语在内的多种语言。
+本项目是东京国际基督徒团契（TICF）的网站。它使用 Next.JS、React、TypeScript 和 Tailwind CSS 构建，并支持包括英语、中文和日语在内的多种语言。
 
 ## 特点
 
@@ -53,18 +53,13 @@
    npm run build
    ```
 
-5. 导出静态文件：
-   ```sh
-   npm run export
-   ```
-
 ## 配置
 
-要配置项目，请根据需要更新 `tsconfig.json` 和 `vite.config.ts` 文件。确保路径别名正确设置以匹配项目结构。
+要配置项目，请根据需要更新 `tsconfig.json` 和 `.prettierrc.js` 文件。确保路径别名正确设置以匹配项目结构。
 
 ## 组件
 
-项目分为几个位于 `src/components` 目录中的组件。每个组件负责网站的特定部分。例如：
+项目分为几个位于 `components` 目录中的组件。每个组件负责网站的特定部分。例如：
 
 - `Header`：包含导航栏和语言切换器。
 - `Banner`：显示主横幅图像。
@@ -79,7 +74,7 @@
 
 ## 多语言支持
 
-项目使用 `i18next` 和 `react-i18next` 支持多语言。翻译文件位于 `src/locales` 目录中。要添加或修改翻译，请更新相应的 JSON 文件：
+项目使用 `next-intl` 支持多语言。翻译文件位于 `locales` 目录中。要添加或修改翻译，请更新相应的 JSON 文件：
 
 - `en.json`：英语翻译
 - `ja.json`：日语翻译

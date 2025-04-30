@@ -1,4 +1,4 @@
-import { loadMessages } from "@/utils/i18n";
+import { loadMessages, generateStaticParams } from "@/utils/i18n";
 import ClientPage from "./ClientPage";
 import { Locale } from "@/utils/i18n";
 import { Metadata } from "next";
@@ -7,9 +7,7 @@ interface PageProps {
   params: Promise<{ locale: Locale }>;
 }
 
-export async function generateStaticParams() {
-  return [{ locale: "en" }, { locale: "zh-CN" }, { locale: "ja" }];
-}
+export { generateStaticParams };
 
 export async function generateMetadata({
   params,

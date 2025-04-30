@@ -17,7 +17,7 @@
 
 Welcome in Christ.
 
-This project is a website for the Tokyo International Christian Fellowship (TICF). It is built using React, TypeScript, Vite, and Tailwind CSS, and supports multiple languages including English, Chinese, and Japanese.
+This project is a website for the Tokyo International Christian Fellowship (TICF). It is built using Next.JS, React, TypeScript, and Tailwind CSS, and supports multiple languages including English, Chinese, and Japanese.
 
 ## Installation
 
@@ -46,18 +46,13 @@ This project is a website for the Tokyo International Christian Fellowship (TICF
    npm run build
    ```
 
-5. Export static files:
-   ```sh
-   npm run export
-   ```
-
 ## Configuration
 
-To configure the project, update the `tsconfig.json` and `vite.config.ts` files as needed. Ensure that the path aliases are correctly set up for the project structure.
+To configure the project, update the `tsconfig.json` and `.prettierrc.js` files as needed. Ensure that the path aliases are correctly set up for the project structure.
 
 ## Components
 
-The project is divided into several components located in the `src/components` directory. Each component is responsible for a specific part of the website. For example:
+The project is divided into several components located in the `components` directory. Each component is responsible for a specific part of the website. For example:
 
 - `Header`: Contains the navigation bar and language switcher.
 - `Banner`: Displays the main banner image.
@@ -72,7 +67,7 @@ The project is divided into several components located in the `src/components` d
 
 ## Multi-language Support
 
-The project supports multiple languages using `i18next` and `react-i18next`. The translation files are located in the `src/locales` directory. To add or modify translations, update the corresponding JSON files:
+The project supports multiple languages using `next-intl`. The translation files are located in the `locales` directory. To add or modify translations, update the corresponding JSON files:
 
 - `en.json`: English translations
 - `ja.json`: Japanese translations

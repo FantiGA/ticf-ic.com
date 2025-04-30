@@ -10,3 +10,7 @@ export const loadMessages = async (locale: Locale) => {
   const messages = await import(`../locales/${locale}.json`);
   return messages.default;
 };
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
