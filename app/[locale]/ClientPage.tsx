@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { TranslationKeys, TranslationSection } from "@/types/translations";
+import { TranslationKeys, TranslationSection } from "@/types";
 import {
   Banner,
   Contact,
