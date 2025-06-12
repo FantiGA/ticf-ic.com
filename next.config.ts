@@ -1,16 +1,17 @@
-import { NextConfig } from "next";
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
   // Enable static export
   output: "export",
-  // Disable i18n config as next-intl handles internationalization
-  // i18n: {
-  //   locales: ["en", "zh-CN", "ja"],
-  //   defaultLocale: "en",
-  // },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
   webpack: (config) => {
     config.resolve.alias = {
@@ -19,6 +20,12 @@ const nextConfig: NextConfig = {
     };
     return config;
   },
+  // Enable compression
+  compress: true,
+  // Enable strict mode
+  reactStrictMode: true,
+  // Enable source maps in production
+  productionBrowserSourceMaps: true,
 };
 
 export default nextConfig;
