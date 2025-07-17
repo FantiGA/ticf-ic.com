@@ -19,7 +19,8 @@
     "our-core-value": "私たちの核心的価値観",
     "our-faith-statment": "私たちの信仰声明",
     "worship-service-information": "礼拝のご案内",
-    "contact": "コンタクト"
+    "contact": "コンタクト",
+    "christian-links": "主内リンク"
   },
   "prayer-text": {
     "corinthians15-3": "イエス・キリストは、あなたの罪のために死なれました。",
@@ -113,6 +114,15 @@
   "contact": {
     "title": "コンタクト",
     "email": "info@ticf-ic.com"
+  },
+  "christian-links": {
+    "title": "主内リンク",
+    "links": [
+      {
+        "title": "横浜恩橋国際バプテスト教会",
+        "url": "https://www.gracebridge.jp/"
+      }
+    ]
   },
   "footer": {
     "copyright.line1": "Copyright \u00A9 2019-",

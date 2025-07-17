@@ -4,6 +4,7 @@ import { useState } from "react";
 import { TranslationKeys, TranslationSection } from "@/types";
 import {
   Banner,
+  ChristianLinks,
   Contact,
   Footer,
   Header,
@@ -37,6 +38,7 @@ export default function ClientPage({ initialTranslations }: ClientPageProps) {
         translations={translations["worship-service-information"]}
       />
       <Contact translations={translations["contact"]} />
+      <ChristianLinks translations={translations["christian-links"]} />
       <Footer translations={translations["footer"]} />
     </>
   );

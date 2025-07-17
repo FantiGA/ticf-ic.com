@@ -19,7 +19,8 @@
     "our-core-value": "我们的核心价值观",
     "our-faith-statment": "我们的信仰声明",
     "worship-service-information": "礼拝信息",
-    "contact": "联系方式"
+    "contact": "联系方式",
+    "christian-links": "主内链接"
   },
   "prayer-text": {
     "corinthians15-3": "耶稣基督为我们的罪死了，",
@@ -113,6 +114,15 @@
   "contact": {
     "title": "联系方式",
     "email": "info@ticf-ic.com"
+  },
+  "christian-links": {
+    "title": "主内链接",
+    "links": [
+      {
+        "title": "横滨恩桥国际浸信会",
+        "url": "https://www.gracebridge.jp/"
+      }
+    ]
   },
   "footer": {
     "copyright.line1": "Copyright \u00A9 2019-",

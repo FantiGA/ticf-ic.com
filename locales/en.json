@@ -19,7 +19,8 @@
     "our-core-value": "Our Core Values",
     "our-faith-statment": "OUR FAITH STATEMENT",
     "worship-service-information": "Worship Service Information",
-    "contact": "Contact"
+    "contact": "Contact",
+    "christian-links": "Fellow Christian Links"
   },
   "prayer-text": {
     "corinthians15-3": "Jesus Christ died for your sins.",
@@ -113,6 +114,15 @@
   "contact": {
     "title": "Contact",
     "email": "info@ticf-ic.com"
+  },
+  "christian-links": {
+    "title": "Fellow Christian Links",
+    "links": [
+      {
+        "title": "Yokohama Grace Bridge International Baptist Church",
+        "url": "https://www.gracebridge.jp/"
+      }
+    ]
   },
   "footer": {
     "copyright.line1": "Copyright \u00A9 2019-",

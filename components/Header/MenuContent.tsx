@@ -58,6 +58,12 @@ export const MenuContent: FC<Props> = ({ translations, setIsActive }) => {
         >
           {translations["contact"]}
         </li>
+        <li
+          className="w-full h-16 text-center text-lg border-b border-black dark:border-foreground flex justify-center items-center cursor-pointer"
+          onClick={() => scrollToTarget("#christian-links")}
+        >
+          {translations["christian-links"]}
+        </li>
       </ul>
     </div>
   );

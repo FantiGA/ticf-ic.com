@@ -8,4 +8,5 @@ export * from "./OurCoreValue";
 export * from "./OurFaithStatment";
 export * from "./WorshipServiceInformation";
 export * from "./Contact";
+export * from "./ChristianLinks";
 export * from "./common";
