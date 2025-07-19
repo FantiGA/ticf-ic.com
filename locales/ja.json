@@ -20,7 +20,7 @@
     "our-faith-statment": "私たちの信仰声明",
     "worship-service-information": "礼拝のご案内",
     "contact": "コンタクト",
-    "christian-links": "主内リンク"
+    "christian-links": "ネットワーク"
   },
   "prayer-text": {
     "corinthians15-3": "イエス・キリストは、あなたの罪のために死なれました。",
@@ -116,7 +116,7 @@
     "email": "info@ticf-ic.com"
   },
   "christian-links": {
-    "title": "主内リンク",
+    "title": "ネットワーク",
     "links": [
       {
         "title": "横浜恩橋国際バプテスト教会",
