@@ -13,6 +13,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Configure Turbopack for Next.js 16
+  turbopack: {
+    resolveAlias: {
+      "@": __dirname,
+    },
+  },
+  // Keep webpack config as fallback
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,

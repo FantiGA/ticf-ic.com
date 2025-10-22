@@ -7,6 +7,7 @@ interface PageProps {
   params: Promise<{ locale: Locale }>;
 }
 
+// Export generateStaticParams directly
 export { generateStaticParams };
 
 export async function generateMetadata({

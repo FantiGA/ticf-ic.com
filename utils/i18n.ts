@@ -50,5 +50,7 @@ export const loadMessages = async (locale: Locale) => {
 };
 
 export async function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return locales.map((locale) => ({
+    locale: locale,
+  }));
 }
